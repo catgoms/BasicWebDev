@@ -1,3 +1,6 @@
+<?php
+    $name = "bear";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +8,14 @@
 </head>
  
 <body>
+    <h1>JavaScript</h1>
     <script charset="utf-8">
-        document.write("hello world");
+        name = "bear";
+        document.write("Hello " + name);
     </script>
+    <h1>php</h1>
     <?php
-
+        echo "Hello ".$name;
     ?>
 </body>
 </html>
