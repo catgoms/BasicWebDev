@@ -15,6 +15,15 @@ article {
     float: left;
     padding: 20px;
 }
-h2 {
-    font-size: 40px;
+
+#control {
+    float: right;
+}
+body.black {
+    background-color: white;
+    color: black;
+}
+body.white {
+    background-color: black;
+    color: white;
 }
