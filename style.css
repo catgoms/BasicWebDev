@@ -26,3 +26,7 @@ body.black {
     background-color: black;
     color: white;
 }
+header img {
+    float: right;
+    height: 100px;
+}

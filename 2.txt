@@ -1,0 +1,9 @@
+<h2>Variables and Constants</h2>
+Variables are:
+<ul>
+    <li>values that can change</li>
+</ul>
+Constants are:
+<ul>
+    <li>values that cannot change</li>
+</ul>
