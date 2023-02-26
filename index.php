@@ -33,9 +33,14 @@
 
     <article>
         <?php
-        if(!empty($_GET['id'])) {
-            echo file_get_contents($_GET['id'].'.txt');
+        if (empty($_GET['id']) === false) {
+            $sql = 'SELECT * FROM topic WHERE id='.$_GET['id'];
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            echo '<h2>'.$row['title'].'</h2>';
+            echo $row['description'];
         }
+        
         ?>
     </article>
 

@@ -4,16 +4,18 @@ header {
 }
 nav {
     border-right: 1px solid grey;
-    width: 250px;
+    width: 200px;
     height: 600px;
     float: left;
 }
 nav ol {
     list-style: none;
+    padding: 0;
 }
 article {
     float: left;
     padding: 20px;
+    width: 500px;
 }
 #control {
     float: right;
