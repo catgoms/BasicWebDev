@@ -1,9 +1,11 @@
 <?php
     $conn = mysqli_connect("localhost:3307", "root", "admin1");
     mysqli_select_db($conn, "opentutorials");
+    $name = mysqli_real_escape_string($conn, $_GET['name']);
+    $password = mysqli_real_escape_string($conn, $_GET['password']);
     $sql = "SELECT * FROM user WHERE name='".$_GET['name']."' AND password='".$_GET['password']."'";
     echo $sql;
-    $result = mysqli_query($conn, "SELECT * FROM topic");
+    $result = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,11 +15,10 @@
  
 <body>
     <?php
-    $password = $_GET['password'];
-    if ($password == "1111") {
-        echo "Hello User";
-    } else {
+    if ($result->num_rows == "0") {
         echo "Who are you?";
+    } else {
+        echo "Hello User";
     }
     ?>
 </body>
