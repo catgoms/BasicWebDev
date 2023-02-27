@@ -35,12 +35,12 @@
     <article>
         <?php
         if (empty($_GET['id']) === false) {
-            $sql = 'SELECT * FROM topic WHERE id='.$_GET['id'];
+            $sql = "SELECT topic.id,title,name,description FROM topic LEFT JOIN user ON topic.author=user.id WHERE topic.id=".$_GET['id'];
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
             echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
-            echo '<p>'.htmlspecialchars($row['author']).'</p>';
-            echo strip_tags($row['description'], '<a><h1><h2><h3><h4><h5><ol><ul><li>');
+            echo '<p>'.htmlspecialchars($row['name']).'</p>';
+            echo strip_tags($row['description'], '<a><h1><h2><h3><h4><h5><ol><ul><li><p>');
         }
         
         ?>
