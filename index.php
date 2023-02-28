@@ -8,7 +8,10 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="http://localhost/basicwebdev/style.css">
+    <link href="http://localhost/basicwebdev/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
  
 <body id="target">
@@ -43,10 +46,14 @@
             echo '<p>'.htmlspecialchars($row['name']).'</p>';
             echo strip_tags($row['description'], '<a><h1><h2><h3><h4><h5><ol><ul><li><p>');
         }
-        
         ?>
     </article>
 
     <script src="http://localhost/basicwebdev/script.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://localhost/basciwebdev/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
