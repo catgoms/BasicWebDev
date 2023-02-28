@@ -20,5 +20,5 @@
 
     $sql ="INSERT INTO topic(title,description,author,created) VALUES('".$title."', '".$description."', '".$user_id."', now())";
     $result = mysqli_query($conn, $sql);
-    header('Location: http://localhost/basicwebdev/index.php');
+    header('Location: /basicwebdev/index.php');
 ?>
